@@ -10,7 +10,7 @@
 }
 
 body	{font-family: Centaur, "Century Gothic", Arial;	font-size: 14pt; 
-	     background-image: url("image/blackbackground.JPG");}	
+	     background-image: url("image/blackbackground.jpg");}	
 
 /* Style the header / Uncomment if needed.
 header {background-color: white; padding: 5px;
@@ -63,7 +63,7 @@ img.logo {position: center; margin-left: auto; margin-right: auto; margin-top: 3
 img.main {margin-left: auto; margin-right: auto;  width: 500px; height: 200px}
 
 table {font-family: Lucida Console, Monaco; border-collapse: collapse; width: 100%; border-color: black; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
-th	{font-family: Lucida Console, Monaco; background-color: black; color: white; border-collapse: collapse; width: 100%; border-color: grey; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
+th	{font-family: Lucida Console, Monaco; text-align: center; background-color: black; color: white; border-collapse: collapse; width: 100%; border-color: grey; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
 tr	{background-color: black; color: white;}	
 td.bolder {font-weight: bold; text-align: right; width: 50px;}
 tr:hover {background-color: black;}	
