@@ -1,0 +1,442 @@
+<!--
+Home Page
+Daniel Howard
+CSC-1300-800-S19
+11Feb18--> 
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">
+
+<!-- Hide from old browser
+var adMsg=" ** Welcome to my page I hope you enjoy!!! ** "
+var beginPos=0
+function scrollingMsg() {
+	msgForm.scrollingMsg.value=adMsg.substring(beginPos, adMsg.length)+adMsg.substring(0,beginPos)
+	beginPos=beginPos+1
+	if (beginPos>adMsg.length) {
+		beginPos=0
+	}
+	window.setTimeout("scrollingMsg()",500)
+}
+
+var salesAmt
+var loanAmt
+var loanRate
+var loanYears
+	
+function validSalesAmt() {
+var salesAmt=parseInt(homeLoanForm.SaleAmount.value,10)
+var downPmtAmt=parseInt(homeLoanForm.DownPayment.value,10)
+loanAmt = salesAmt-downPmtAmt
+homeLoanForm.LoanAmount.value = loanAmt
+homeLoanForm.Rate.focus()
+}
+
+function CalcLoanAmt() {
+    loanRate=parseFloat(homeLoanForm.Rate.value)
+    loanYears=homeLoanForm.Years.value
+    var monthlyPmtAmt = monthlyPmt(loanAmt,loanRate,loanYears)
+    homeLoanForm.Payment.value=dollarFormat(monthlyPmtAmt.toString())
+}
+
+function monthlyPmt(loanAmt,loanRate,loanYears) {
+    var interestRate = loanRate/1200
+    var Pmts = loanYears * 12
+    var Amnt = loanAmt * (interestRate / (1 - (1 / Math.pow(1+interestRate,Pmts))))
+    return Amnt.toFixed(2)
+}
+
+function dollarFormat(valuein) {
+    var formatValue = ""
+    var formatDollars = ""
+    formatAmt = valuein.split(".",2)     
+    var dollars = formatAmt[0]
+    var dollarLen = dollars.length
+    if (dollarLen > 3) {
+       while (dollarLen > 0) {
+             tempDollars = dollars.substring(dollarLen - 3,dollarLen)
+             if (tempDollars.length == 3) {
+                formatDollars = ","+tempDollars+formatDollars
+                dollarLen = dollarLen - 3
+             } else {
+                  formatDollars=tempDollars+formatDollars
+                  dollarLen = 0
+               }
+       }
+       if (formatDollars.substring(0,1) == ",")
+          dollars = formatDollars.substring(1,formatDollars.length)
+       else
+          dollars = formatDollars
+   }
+       var cents = formatAmt[1]
+       var formatValue = "$"+dollars+"."+cents
+       return formatValue
+}
+
+function copyRight() {
+	var lastModDate = document.lastModified
+	var lastModDate = lastModDate.substring(0,10)
+	displayDateLast.innerHTML = "<h6>&copy; Howards Web Design INC."+"<br />This document was last modified on:<br />" + lastModDate +".</h6>"
+   }
+</script>
+
+<title>Howards Website</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<!--Body-->
+<div style="text-align: center">
+	<img src="image/fireworks.jpg" width="1000" height="300" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888" />
+</div>
+
+<body onLoad="scrollingMsg(); scrollColor(); countDown(); copyRight()">
+<form id="msgForm">
+	<p style="text-align:center"><input type="text" name="scrollingMsg" size="40" /></p>
+</form>
+<br />
+<h1 align="center">Howard's webdesign Inc.</h1>
+<br />
+
+<!--Menu-->
+<table class="menu" style="box-shadow: 10px 10px 12px #888888">
+	<tr>	
+	<td class="menuicon">
+	<div class="dropdown">
+	<button class="dropbtn">Links</button>		
+		<div class="dropdown-content">
+			<a href="home.html">Home</a>
+			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The at APP!</a>	
+			<a href="https://howardssecuritysolutions.com">Login</a>
+			<a href="contact.html">Contact Me</a>			
+		</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>
+	
+	<td class="menuicon">
+	<div class="dropdown">
+	<button class="dropbtn">Business</button>
+		<div class="dropdown-content">
+			<a href="prices.html">Prices & Specials</a>
+			<a href="policyAgreement.html">Policy Aggrement</a>
+			<a href="affiliations.html">Affliations</a>			
+			<a href="certs.html">Certifications</a>			
+		</div>	
+		<td class="menupipe">|</td>
+	</td>
+	</div>
+	
+	<td class="menuicon">
+	<div class="dropdown">		
+	<button class="dropbtn">Programming</button>
+		<div class="dropdown-content">
+			<a href="binaryToDecimal.html">Binary To Decimal &nbsp; &nbsp;</a>
+			<a href="hexadecimal.html">Hexadecimal &nbsp; &nbsp;</a>	
+			<a href="ascii.html">ascii &nbsp; &nbsp;</a>
+			<a href="calculations.html">Calculations &nbsp; &nbsp;</a>
+			<a href="grocries.html">Grocries &nbsp; &nbsp;</a>
+		</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>	
+	</tr>
+</table>
+<br style="clear: left" />
+<div class="w3-margin-bottom">
+<h1 align="center">Menu for the week</h1>
+<div style="overflow-x:auto;">	
+	<table>
+	<th>Sunday</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">
+	Beef Stew<br /><br />	
+	<li>Beef</li>
+	<li>Beef Broth</li>
+	<li>Carrots</li>
+	<li>Cellery</li>
+	<li>Red Potatoes</li>
+	<li>Egg Noodles</li>
+	</td>
+	</tr>
+	</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>
+	<th>Monday</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">
+	Ham and cheese Sand<br /><br />
+	<li>Hawain rolls</li>
+    <li>Ham</li>
+	<li>Swiss Cheese</li>
+	<li>Fennel Seed</li>
+	</td>
+	</tr>
+	</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>	
+	<th>Tuesday</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">
+	Tacos<br /><br />
+	<li>Taco Kit</li>
+	<li>Shredded Lettuce</li>
+	<li>Black Olive</li>
+	<li>Diced Tomatoes</li>
+	<li>Cheese</li>
+	<li>Corn</li>
+	<li>SourCream</td></li>
+	<td>
+	</tr>
+	</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>	
+	<th>Wedensday</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">
+	Chicken And Potatoes<br /><br />
+	<li>Chicken</li>
+	<li>Red Potatoes</li>
+	<li>Yams</li>
+	<li>Sweet Potatoes</li>
+	<li>Marshmallows</li>
+	</td>
+	</tr>
+	</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>	
+	<th>Thursday</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">
+	Speghetti Dinner<br /><br />
+	<li>Spaghetti</li>
+	<li>Sauce</li>
+	<li>Mushrooms</li>
+	<li>Garlic Bread</li>
+	</td>
+	</tr>
+	</table>
+</div>	
+<div style="overflow-x:auto;">
+	<table>	
+	<th>friday</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">
+	Pizza<br /><br />
+	<li>Pizza Shells</li>
+	<li>Pizza Sauce</li>
+	<li>Mozzeralla Cheese</li>
+	<li>Pepporoni</li>
+	<li>Canned Mushroom</li>
+	<li>salad</li>
+	</td>
+	</tr>
+	</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>
+	<th>saturday</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">
+	I'm not cooking<br /><br />
+	</td>
+	</tr>
+	</table>
+</div>
+
+<br />
+<div style="overflow-x:auto;">
+<table><th><h1>Grocery List</h1>
+	<h4>Broken down into sections specifically for this menu for now</h4>
+	<h4>Need to add a selection menu</h4></th>
+</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>	
+	<th>Fruit/Veggies</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">	
+	<li>Apples</li>
+	<li>Carrots</li>
+	<li>Cellery</li>
+	<li>Salad</li>
+	<li>Red Potatoes</li>
+	<li>Shredded Lettuce</li>
+	</td>
+	</tr>
+	</table>
+</div>	
+<br />
+<br />
+<div style="overflow-x:auto;">
+	<table>	
+	<th>Isle</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">
+	<li>Egg Noodles</li>
+	<li>Beef Broth</li>
+	<li>Taco Kit</li>
+	<li>Black Olives</li>
+	<li>Diced Tomatoes</li>
+	<li>Yams</li>
+	<li>Marshmallows</li>
+	<li>Fennel Seed</li>
+	<li>Spaghetti</li>
+	<li>Sauce</li>
+	<li>Pizza Shells</li>
+	<li>Pizza Sauce</li>
+	<li>Mozzeralla Cheese</li>
+	<li>Pepporoni</li>
+	<li>Canned Mushroom</li>
+	</td>
+	</tr>
+	</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>	
+	<th>Meats</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">	
+	<li>Beef for stew</li>
+	<li>Ham Lunch(meat)</li>
+	<li>Turkey Burger</li>
+	<li>Chicken</li>
+	<li></li>
+	<li></li>
+	</td>
+	</tr>
+	</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>	
+	<th>Hygiene</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">	
+	<li>ToothPaste</li>
+	<li>ToothBrush</li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	</td>
+	</tr>
+	</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>	
+	<th>Household</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">	
+	<li>Dog Food</li>
+	<li>Cat Dog</li>
+	<li>Cleaner</li>
+	<li>Papper Towels</li>
+	<li>Toilet Paper</li>
+	<li></li>
+	</td>
+	</tr>
+	</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>	
+	<th>Frozen</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">	
+	<li>Corn</li>
+	<li>Garlic Bread</li>
+	<li>Veggies</li>
+	<li></li>
+	<li></li>
+	<li></li>
+	</td>
+	</tr>
+	</table>
+</div>
+<div style="overflow-x:auto;">
+	<table>	
+	<th>Bread/Milk</th>
+	<tr>
+	<td>
+	<ul style="list-style-type:square;">		
+	<li>Bread</li>
+	<li>Milk</li>
+	<li>Eggs</li>
+	<li>Hawain Rolls</li>
+	<li>Swiss Cheese</li>
+	<li>Sliced Cheese</li>
+	<li>Shreeded Cheese</li>	
+	<li></li>
+	<li></li>
+	<li></li>
+	</td>
+	</tr>
+	</table>
+</div>
+<div class="w3-container w3-mobile w3-text-white">
+<div id="displayCountDown"></div>
+<div id="displayDateLast">
+</div>	
+</div>
+<br />	
+</body>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "black";
+}
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>   
+</html> 

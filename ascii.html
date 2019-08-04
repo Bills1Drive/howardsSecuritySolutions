@@ -1,0 +1,165 @@
+<!--
+Home Page
+Daniel Howard
+CSC-1300-800-S19
+11Feb18--> 
+
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+
+<title>Howards Website</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<!--Body-->
+<body>
+<div style="text-align: center">
+	<img src="image/fireworks.jpg" width="1000" height="300" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888" />
+</div>
+<h1 align="center">Howard's webdesign Inc.</h1>
+<br />
+<!--Menu-->
+<table class="menu" style="box-shadow: 10px 10px 12px #888888">
+	<tr>	
+ 	<td class="menuicon">
+	<div class="dropdown">
+	<button class="dropbtn">Links</button>		
+		<div class="dropdown-content">
+			<a href="home.html">Home</a>
+			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The at APP!</a>	
+			<a href="https://howardssecuritysolutions.com">Login</a>
+			<a href="contact.html">Contact Me</a>			
+		</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>
+	
+	<td class="menuicon">
+	<div class="dropdown">
+	<button class="dropbtn">Business</button>
+		<div class="dropdown-content">
+			<a href="prices.html">Prices & Specials</a>
+			<a href="policyAgreement.html">Policy Aggrement</a>
+			<a href="affiliations.html">Affliations</a>			
+			<a href="certs.html">Certifications</a>			
+		</div>	
+		<td class="menupipe">|</td>
+	</td>
+	</div>
+	
+	<td class="menuicon">
+	<div class="dropdown">		
+	<button class="dropbtn">Programming</button>
+		<div class="dropdown-content">
+			<a href="binaryToDecimal.html">Binary To Decimal &nbsp; &nbsp;</a>
+			<a href="hexadecimal.html">Hexadecimal &nbsp; &nbsp;</a>	
+			<a href="ascii.html">ascii &nbsp; &nbsp;</a>
+			<a href="calculations.html">Calculations &nbsp; &nbsp;</a>
+			<a href="grocries.html">Grocries &nbsp; &nbsp;</a>
+		</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>	
+</table>
+<br style="clear: left" />
+<body>
+<table>
+	<th>Text character | ASCII (hex) | EBCDIC(hex)</th>
+	<tr>
+	<td>ascii</td>
+	<td>0</td> 
+	<td>1</td> 
+	<td>2</td> 
+	<td>3</td> 
+	<td>4</td>
+	<td>5</td>
+	<td>6</td>
+	<td>7</td>
+	<td>8</td>
+	<td>9</td>
+	<td>A</td>
+	<td>B</td>
+	<td>C</td>
+	<td>D</td>
+	<td>E</td>
+	<td>F</td>
+	<td>G</td>
+	<td>H</td>
+	</tr>
+	<tr>
+	<td>EBCDIC</td>
+	<td>30</td> 
+	<td>31</td> 
+	<td>32</td> 
+	<td>33</td> 
+	<td>34</td>
+	<td>35</td>
+	<td>36</td>
+	<td>37</td>
+	<td>38</td>
+	<td>39</td>
+	<td>41</td>
+	<td>42</td>
+	<td>43</td>
+	<td>44</td>
+	<td>45</td>
+	<td>46</td>
+	<td>47</td>
+	<td>48</td>
+	</tr>
+</table>
+</body>
+<!--Footer-->
+<div class="w3-margin-bottom">
+	<footer class="w3-container">
+	<a href="https://www.linkedin.com/in/daniel-howard-95b259174/" class="fa fa-linkedin"></a>&nbsp; &nbsp;
+	<a href="https://www.facebook.com/gdfgf" class="fa fa-facebook"></a>&nbsp; &nbsp;	
+	</footer>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "black";
+}
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+   
+</body>
+</html> 

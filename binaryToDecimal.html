@@ -1,0 +1,273 @@
+<!--
+Home Page
+Daniel Howard
+CSC-1300-800-S19
+11Feb18--> 
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">
+
+<!-- Hide from old browser
+var adMsg=" ** Welcome to my page I hope you enjoy!!! ** "
+var beginPos=0
+function scrollingMsg() {
+	msgForm.scrollingMsg.value=adMsg.substring(beginPos, adMsg.length)+adMsg.substring(0,beginPos)
+	beginPos=beginPos+1
+	if (beginPos>adMsg.length) {
+		beginPos=0
+	}
+	window.setTimeout("scrollingMsg()",500)
+}
+
+var salesAmt
+var loanAmt
+var loanRate
+var loanYears
+	
+function validSalesAmt() {
+var salesAmt=parseInt(homeLoanForm.SaleAmount.value,10)
+var downPmtAmt=parseInt(homeLoanForm.DownPayment.value,10)
+loanAmt = salesAmt-downPmtAmt
+homeLoanForm.LoanAmount.value = loanAmt
+homeLoanForm.Rate.focus()
+}
+
+function CalcLoanAmt() {
+    loanRate=parseFloat(homeLoanForm.Rate.value)
+    loanYears=homeLoanForm.Years.value
+    var monthlyPmtAmt = monthlyPmt(loanAmt,loanRate,loanYears)
+    homeLoanForm.Payment.value=dollarFormat(monthlyPmtAmt.toString())
+}
+
+function monthlyPmt(loanAmt,loanRate,loanYears) {
+    var interestRate = loanRate/1200
+    var Pmts = loanYears * 12
+    var Amnt = loanAmt * (interestRate / (1 - (1 / Math.pow(1+interestRate,Pmts))))
+    return Amnt.toFixed(2)
+}
+
+function dollarFormat(valuein) {
+    var formatValue = ""
+    var formatDollars = ""
+    formatAmt = valuein.split(".",2)     
+    var dollars = formatAmt[0]
+    var dollarLen = dollars.length
+    if (dollarLen > 3) {
+       while (dollarLen > 0) {
+             tempDollars = dollars.substring(dollarLen - 3,dollarLen)
+             if (tempDollars.length == 3) {
+                formatDollars = ","+tempDollars+formatDollars
+                dollarLen = dollarLen - 3
+             } else {
+                  formatDollars=tempDollars+formatDollars
+                  dollarLen = 0
+               }
+       }
+       if (formatDollars.substring(0,1) == ",")
+          dollars = formatDollars.substring(1,formatDollars.length)
+       else
+          dollars = formatDollars
+   }
+       var cents = formatAmt[1]
+       var formatValue = "$"+dollars+"."+cents
+       return formatValue
+}
+
+function copyRight() {
+	var lastModDate = document.lastModified
+	var lastModDate = lastModDate.substring(0,10)
+	displayDateLast.innerHTML = "<h6>&copy; Howards Web Design INC."+"<br />This document was last modified on:<br />" + lastModDate +".</h6>"
+   }
+</script>
+
+<title>Howards Website</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<!--Body-->
+<div style="text-align: center">
+	<img src="image/fireworks.jpg" width="1000" height="300" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888" />
+</div>
+
+<body onLoad="scrollingMsg(); scrollColor(); countDown(); copyRight()">
+<form id="msgForm">
+	<p style="text-align:center"><input type="text" name="scrollingMsg" size="40" /></p>
+</form>
+<br />
+<h1 align="center">Howard's webdesign Inc.</h1>
+<br />
+
+<!--Menu-->
+<table class="menu" style="box-shadow: 10px 10px 12px #888888">
+	<tr>	
+	<td class="menuicon">
+	<div class="dropdown">
+	<button class="dropbtn">Links</button>		
+		<div class="dropdown-content">
+			<a href="home.html">Home</a>
+			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The at APP!</a>	
+			<a href="https://howardssecuritysolutions.com">Login</a>
+			<a href="contact.html">Contact Me</a>			
+		</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>
+	
+	<td class="menuicon">
+	<div class="dropdown">
+	<button class="dropbtn">Business</button>
+		<div class="dropdown-content">
+			<a href="prices.html">Prices & Specials</a>
+			<a href="policyAgreement.html">Policy Aggrement</a>
+			<a href="affiliations.html">Affliations</a>			
+			<a href="certs.html">Certifications</a>			
+		</div>	
+		<td class="menupipe">|</td>
+	</td>
+	</div>
+	
+	<td class="menuicon">
+	<div class="dropdown">		
+	<button class="dropbtn">Programming</button>
+		<div class="dropdown-content">
+			<a href="binaryToDecimal.html">Binary To Decimal &nbsp; &nbsp;</a>
+			<a href="hexadecimal.html">Hexadecimal &nbsp; &nbsp;</a>	
+			<a href="ascii.html">ascii &nbsp; &nbsp;</a>
+			<a href="calculations.html">Calculations &nbsp; &nbsp;</a>
+			<a href="grocries.html">Grocries &nbsp; &nbsp;</a>
+		</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>	
+	</tr>
+</table>
+<br style="clear: left" />
+
+
+<!---Binary back to decimal -->
+<table>	
+	<th>Binary Numbers</th>	
+</table>
+<table>
+	<th>Binary back to decimal.</th>	
+</table>
+<table style="border-none"> 
+	<th><li>Change 1011 to A decimal:</th><br />
+    <tr><td>Bytes:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>  
+	<tr><td>Power2</td><br><br><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+	<tr><td>Binary turned on:</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td></tr> 
+	<tr><td>Now add the represented bit value.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8<td>0</td><td>2</td><td>1</td></tr>  
+</table>
+<table>
+<tr><th>Decimal Number result for 1011:</th><br>
+	<td>8 + 2 = 10</td><br>
+    <td>10 + 1 = 11</td><br>	
+	<td>11</td>
+</tr>
+</table>
+
+<table style="border-none"> 
+	<th><li>Change 111011 to A decimal.</th><br />
+	<tr><td>Bytes:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+	<tr><td>Power2</td><br><br><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+	<tr><td>Binary turned on:</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr> 
+	<tr><td>Now add the represented bit value.</td><td>0</td><td>0</td><td>32</td><td>16</td><td>8<td>0</td><td>2</td><td>1</td></tr>  
+</table>
+
+<table>
+<tr><th>Change 111011 to A decimal.</th><br>
+<td>32 + 16 = 48<br>
+    48 + 8 = 56<br>
+	56 + 2 = 58<br>
+	58 + 1 = 59
+    <td>59</td></td>
+</tr>
+</table>
+<!---Binary back to decimal -->
+<table>	
+	<th>Binary Numbers</th>	
+</table>
+<table>
+	<th>Binary back to decimal.</th>	
+</table>
+<table style="border-none"> 
+	<th><li>Change 1011 to A decimal:</th><br />
+    <tr><td>Bytes:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>  
+	<tr><td>Power2</td><br><br><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+	<tr><td>Binary turned on:</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td></tr> 
+	<tr><td>Now add the represented bit value.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8<td>0</td><td>2</td><td>1</td></tr>  
+</table>
+<table>
+<tr><th>Decimal Number result for 1011:</th><br>
+	<td>8 + 2 = 10</td><br>
+    <td>10 + 1 = 11</td><br>	
+	<td>11</td>
+</tr>
+</table>
+
+<table style="border-none"> 
+	<th><li>Change 111011 to A decimal.</th><br />
+	<tr><td>Bytes:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+	<tr><td>Power2</td><br><br><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+	<tr><td>Binary turned on:</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr> 
+	<tr><td>Now add the represented bit value.</td><td>0</td><td>0</td><td>32</td><td>16</td><td>8<td>0</td><td>2</td><td>1</td></tr>  
+</table>
+
+<table>
+<tr><th>Change 111011 to A decimal.</th><br>
+<td>32 + 16 = 48<br>
+    48 + 8 = 56<br>
+	56 + 2 = 58<br>
+	58 + 1 = 59
+    <td>59</td></td>
+</tr>
+</table>
+
+</body>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "black";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</html>
+
+
+
+
+
+
+

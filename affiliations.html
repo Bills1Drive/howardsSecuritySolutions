@@ -1,0 +1,174 @@
+<!--
+Home Page
+Daniel Howard
+CSC-1300-800-S19
+11Feb18--> 
+
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Howards Website</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<!--Body-->
+<body>
+<div style="text-align: center">
+	<img src="image/fireworks.jpg" width="1000" height="300" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888" />
+</div>
+<h1 align="center">Howard's webdesign Inc.</h1>
+<br />
+<!--Menu-->
+<table class="menu" style="box-shadow: 10px 10px 12px #888888">
+	<tr>	
+ 	<td class="menuicon">
+	<div class="dropdown">
+	<button class="dropbtn">Links</button>		
+		<div class="dropdown-content">
+			<a href="home.html">Home</a>
+			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The at APP!</a>	
+			<a href="https://howardssecuritysolutions.com">Login</a>
+			<a href="contact.html">Contact Me</a>			
+		</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>
+	
+	<td class="menuicon">
+	<div class="dropdown">
+	<button class="dropbtn">Business</button>
+		<div class="dropdown-content">
+			<a href="prices.html">Prices & Specials</a>
+			<a href="policyAgreement.html">Policy Aggrement</a>
+			<a href="affiliations.html">Affliations</a>			
+			<a href="certs.html">Certifications</a>			
+		</div>	
+		<td class="menupipe">|</td>
+	</td>
+	</div>
+	
+	<td class="menuicon">
+	<div class="dropdown">		
+	<button class="dropbtn">Programming</button>
+		<div class="dropdown-content">
+			<a href="binaryToDecimal.html">Binary To Decimal &nbsp; &nbsp;</a>
+			<a href="hexadecimal.html">Hexadecimal &nbsp; &nbsp;</a>	
+			<a href="ascii.html">ascii &nbsp; &nbsp;</a>
+			<a href="calculations.html">Calculations &nbsp; &nbsp;</a>
+			<a href="grocries.html">Grocries &nbsp; &nbsp;</a>
+		</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>	
+</table>
+<br style="clear: left" />
+<body onLoad="scrollingMsg(); scrollColor(); countDown(); copyRight()">
+<!--Links-->
+
+<div class="w3-container">
+<table>
+<th><h5>Click Image</h5></th>
+<tr><td><h5>For Veterans</h5>	
+	<div class="w3-third">
+		<a href="https://suicidepreventionlifeline.org/help-yourself/veterans/">
+		<img src="image/suicidebanner.JPG" alt="Suicide Prevention Lifeline veterans" width="200" height="100">
+		</a>		
+	</div>
+</td></tr>
+</table>
+<table>
+<tr><td>
+	<div class="w3-third">
+		<h5>Suicide Prevention Lifeline</h5>
+		<a href="https://suicidepreventionlifeline.org">
+		<img alt="Suicide Prevention Lifeline" src="image/suicidebanner.JPG" width="200" height="100">
+		</a>		
+	</div>
+</td>
+</tr>
+</table>
+
+<table>
+<tr><td>	
+	<div class="w3-third">
+		<h5>Stop Online child predators.</h5>
+		<a href="https://www.stopchildpredators.org/">
+		<img src="image/preditors.JPG" alt="W3Schools"  width="200" height="100">
+		</a>
+		
+	</div>
+</td></tr>
+</table>
+<table>
+<tr><td>	
+	<div class="w3-row w3-border">
+	<div class="w3-third">	
+		<h5>Active Amber Alersts</h5>
+		<a href="https://www.missingkids.org/Amber.html">
+		<img src="image/bringthemhome.JPG" alt="W3Schools" width="200" height="100">
+		</a>
+		
+	</div>
+	</div>
+</table>
+</td></tr>
+<table>
+<tr><td>
+	<div class="w3-third">
+		<h5>Safe And Sound With Amaya.</h5>
+		<a href="https://www.facebook.com/SafeAndSoundWithAmaya/">
+		<img src="image/SafeAndSound.png" alt="W3Schools" width="200" height="100">
+		</a>		
+	</div>	
+</td></tr>
+</table>
+</div>	
+</body>
+
+
+<!--End Of Footer-->
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "black";
+}
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script> 
+</html> 
