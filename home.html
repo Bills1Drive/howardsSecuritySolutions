@@ -8,7 +8,6 @@ CSC-1300-800-S19
 <head>
 <meta charset="utf-8" />
 <script type="text/javascript">
-
 <!-- Hide from old browser
 var adMsg=" ** Welcome to my page I hope you enjoy!!! ** "
 var beginPos=0
@@ -20,7 +19,6 @@ function scrollingMsg() {
 	}
 	window.setTimeout("scrollingMsg()",500)
 }
-
 var salesAmt
 var loanAmt
 var loanRate
@@ -33,21 +31,18 @@ loanAmt = salesAmt-downPmtAmt
 homeLoanForm.LoanAmount.value = loanAmt
 homeLoanForm.Rate.focus()
 }
-
 function CalcLoanAmt() {
     loanRate=parseFloat(homeLoanForm.Rate.value)
     loanYears=homeLoanForm.Years.value
     var monthlyPmtAmt = monthlyPmt(loanAmt,loanRate,loanYears)
     homeLoanForm.Payment.value=dollarFormat(monthlyPmtAmt.toString())
 }
-
 function monthlyPmt(loanAmt,loanRate,loanYears) {
     var interestRate = loanRate/1200
     var Pmts = loanYears * 12
     var Amnt = loanAmt * (interestRate / (1 - (1 / Math.pow(1+interestRate,Pmts))))
     return Amnt.toFixed(2)
 }
-
 function dollarFormat(valuein) {
     var formatValue = ""
     var formatDollars = ""
@@ -74,7 +69,6 @@ function dollarFormat(valuein) {
        var formatValue = "$"+dollars+"."+cents
        return formatValue
 }
-
 function copyRight() {
 	var lastModDate = document.lastModified
 	var lastModDate = lastModDate.substring(0,10)
@@ -161,6 +155,5 @@ function copyRight() {
 
 </body>
 </html>
-
 
 	
