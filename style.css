@@ -10,7 +10,7 @@
 }
 
 body	{font-family: Centaur, "Century Gothic", Arial;	font-size: 14pt; 
-	     background-image: url("image/blackbackground.JPG");}	
+	     background-image: url("~/blackbackground.JPG");}	
 
 /* Style the header / Uncomment if needed.
 header {background-color: white; padding: 5px;
