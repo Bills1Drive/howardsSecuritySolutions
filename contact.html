@@ -126,7 +126,7 @@ function copyRight() {
 	<tr>
 	<td>	
 	<form method="post" action="mailto:vegashoward84@yahoo.com">
-		<h5>Please enter your contact information below to collect some information detailing what you would like to see on your page.</h5></form>
+		<h54>Please enter your contact information below to collect some information detailing what you would like to see on your page.</h5></form>
 	</td>
 	</tr>
 	</div>
@@ -134,69 +134,92 @@ function copyRight() {
 <table>
 	<tr><td>
 	<div id="menu7" class="menu">
-	<fieldset>
-	<legend>Your contact information...</legend>	
-	<ol class="c">
-	<h4>
-	<li>First Name &nbsp; &nbsp;<input name="firstname" type="text" size="30" /></li><br /><br />
-	<li>Last Name &nbsp; &nbsp;<input name="lastname" type="text" size="30" /></li><br /><br />	
-	<li>City &nbsp; &nbsp;<input name="email" type="text" size="30" /></li><br /><br />
-	<li>state &nbsp; &nbsp;<input name="email" type="text" size="30" /></li><br /><br />
-	<li>E-mail Address &nbsp; &nbsp;<input name="email" type="text" size="30" /></li><br /><br />
-	</ol>
-	</h4>
-	</fieldset>	
+		<fieldset>
+		<legend>Your contact information...</legend>	
+		<ol class="c">
+		<h5>
+		<li>First Name &nbsp; &nbsp;<input name="firstname" type="text" size="30" /></li><br /><br />
+		<li>Last Name &nbsp; &nbsp;<input name="lastname" type="text" size="30" /></li><br /><br />	
+		<li>City &nbsp; &nbsp;<input name="email" type="text" size="30" /></li><br /><br />
+		<li>state &nbsp; &nbsp;<input name="email" type="text" size="30" /></li><br /><br />
+		<li>E-mail Address &nbsp; &nbsp;<input name="email" type="text" size="30" /></li><br /><br />
+		</ol>
+		</h5>
+		</fieldset>	
 	</div>
-	
-<div id="menu8" class="menu">	
+	</td></tr>
+</table>
+<table>
+	<tr><td>	
+	<div id="menu8" class="menu">	
+		<fieldset>
+		<legend>What type of site will you be interested in?</legend>		
+		<br />
+		<h5>
+		<ol class="c">
+		<li>Already have a site! &nbsp;</li><input name="sitetype" type="checkbox" value="site"/>
+		<li>Portfolio &nbsp;</li><input name="sitetype" type="checkbox" value="portfolio"/>
+		<li>Bussiness w/items to display &nbsp;<br /></li><input name="sitetype" type="checkbox" value="business"/>
+		<li>Photography &nbsp;</li><input name="sitetype" type="checkbox" value="photography"/>
+		<li>Travel & Adventure &nbsp;</li>	<input name="sitetype" type="checkbox" value="adventure"/>
+		</ol>
+		</h5>
+		</fieldset>
+	</div>
+	</td></tr>
+</table>
+
+<table>
+	<tr><td>
+	<div id="menu10" class="menu">
 	<fieldset>
-	<legend>What type of site will you be interested in?</legend>		
-	<br />
-	<ol class="c"><h4>
-	<li>Already have a site! &nbsp;</li><input name="sitetype" type="checkbox" value="site"/>
-	<li>Portfolio &nbsp;</li><input name="sitetype" type="checkbox" value="portfolio"/>
-	<li>Bussiness w/items to display &nbsp;<br /></li><input name="sitetype" type="checkbox" value="business"/>
-	<li>Photography &nbsp;</li><input name="sitetype" type="checkbox" value="photography"/>
-	<li>Travel & Adventure &nbsp;</li>	<input name="sitetype" type="checkbox" value="adventure"/></h4></ol>
+		<legend>Font Type?</legend>	
+		<h5 style="black">Name a font or grouping stlye not listed: <input name="additstation" type="text" size="30" maxlength="30" />
+		<br />
+		<br />
+		<select name="station">
+		<option>Arial</option>
+		<option>Cursive</option>
+		<option>Plain</option>
+		</select>
+		<span class="right" style="color:white"> &nbsp;  &nbsp; Please select a font.</span>
 	</fieldset>
-</div>
-<div id="menu10" class="menu">
-	<fieldset>
-	<legend>Font Type?</legend>	
-	<h4 style="black">Name a font or grouping stlye not listed: <input name="additstation" type="text" size="30" maxlength="30" />
-	<br />
-	<br />
-	<select name="station">
-	<option>Arial</option>
-	<option>Cursive</option>
-	<option>Plain</option>
-	</select>
-	<span class="right" style="color:white"> &nbsp;  &nbsp; Please choose a font.</span>
-	</fieldset>
-</div>
+	</div>
+	</td></tr>
+</table>
 <br />
-<div id="menu9" class="menu">		
-<fieldset>
-	<legend>Total Pages?</legend>		
-	<ol class="c"><h4>
-	<li><input name="pages" type="radio" value="1" />
-	<li><input name="pages" type="radio" value="2" />
-	<li><input name="pages" type="radio" value="3" />
-	<li><input name="pages" type="radio" value="4" />
-	<li><input name="pages" type="radio" value="5" />
-	</ol></h4>
-</fieldset>
-</div>
-<fieldset>
-	<legend>Provide any additional information you would like to add or tell me about the design of your site? </legend>
-	<br />
-	<textarea name="other" rows="3"cols="100"></textarea>		
-	<p><input type="submit" value="Submit" />
-	<input type="reset" value="Reset" />
-	<br />
-	<h6 style="color: white">Thank you for providing this information, I will use this information to provide you with a(n) expected cost for the entire completion of your project.</h6>
-	<br>
-</fieldset>
+
+<table>
+	<tr><td>
+	<div id="menu9" class="menu">		
+	<fieldset>
+		<legend>Total Pages?</legend>		
+		<ol class="c">
+		<h5>
+		<li><input name="pages" type="radio" value="1" />
+		<li><input name="pages" type="radio" value="2" />
+		<li><input name="pages" type="radio" value="3" />
+		<li><input name="pages" type="radio" value="4" />
+		<li><input name="pages" type="radio" value="5" />
+		</ol>
+		</h5>
+	</fieldset>
+	</td></tr>
+	</div>
+
+<table>
+	<tr><td>
+	<fieldset>
+		<legend>Provide any additional information you would like to add or tell me about the design of your site? </legend>
+		<br />
+		<textarea name="other" rows="3"cols="100"></textarea>		
+		<p><input type="submit" value="Submit" />
+		<input type="reset" value="Reset" />
+		<br />
+		<h6 style="color: white">Thank you for providing this information, I will use this information to provide you with a(n) expected cost for the entire completion of your project.</h6>
+		<br>
+	</fieldset>
+	</td></tr>
 </table>
 
 <div class="w3-display-container">
