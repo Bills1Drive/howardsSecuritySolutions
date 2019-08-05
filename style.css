@@ -1,118 +1,95 @@
-* {
-  box-sizing: border-box;
-}
+/***
+CSS Style sheet
+Daniel Howard
+CSC-1300-800-S19
+11Feb18
+ ***/
 
-#displayDateLast {
-	text-align: left;
-	width: 50%;
-	margin-right: auto;
-	margin-left: auto;
-}
+body	{
+		font-family: Centaur, "Century Gothic", Arial;
+		font-size: 14pt;
+		background-image: url("image/blackbackground.JPG");
+		}
+		
+h1	{color:  #b1cece;
+	text-align: center;}
 
-body	{font-family: Centaur, "Century Gothic", Arial;	font-size: 14pt; 
-	     background-image: url("blackbackground.jpg");}	
+h2, h3 {color:  #b1cece;}
 
-/* Style the header / Uncomment if needed.
-header {background-color: white; padding: 5px;
-  text-align: center;
-  font-size: 35px;
-  color: blue;
-} */
+p 		{	
+		margin-left: 10pt;
+		margin-right: 10pt;
+		color: #ffffff;
+		}
+a 		{
+		text-decoration: none;
+	    color: #ffffff;}
+		
+a:hover {background: #eff5f5;
+		color: #000000;}
+		
 
-/* Container for flexboxes */
-section {
-  display: -webkit-flex;
-  display: flex;
-}
-/* Style the content */
-article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  background-color: #55552b;
-  padding: 10px;
-}
+img.align-left {float: left;
+				margin-left: auto;
+				margin-right: auto;}
 
-/* Style the footer */
-footer {
-  background-color: #55552b;
-  padding: 10px;
-  text-align: center;
-  color: black;
-}
-
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-}
+img.align-right {float: right;
+				margin-left: auto;
+				margin-right: auto;}
 
 
-h1 {font-family: Lucida Console, Monaco; font-size: 40px; color: white;}
-h2 {font-family: Lucida Console, Monaco; font-size: 35px; color: white;}
-h3, legend{font-family: Lucida Console, Monaco; font-size: 25px; color: white;}
-h4, h5, h6, p, a {font-family: Lucida Console, Monaco; font-size: 16px; color: white;}
-hr {border-color: #40ff00;}
-p.box {width: 400px; margin-left: auto; margin-right:auto; margin-top: 100px; border-radius: 5px; padding: 10px; background-color: white; color: white;}
+table	{
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		border-color: #545859;
+		border-style: ridge;
+		border-width: 10px;
+		background-color: #737373;
+		padding: 15px;
+		text-align: center;
+		}
+th		{
+		color: #ffffff;
+		background-color: #000000;
+		margin-left: auto;
+		margin-right: auto;	
+		border-width: 10px;
+		padding: 20px;	
+		}
+tr.stripe	{
+		background-color: #e0ebeb;
+		margin-left: auto;
+		margin-right: auto;
+		border-color: #000000;	
+		border-width: 10px;
+		padding: 20px;
+		}
+
+td.bolder	
+		{
+		font-weight: bold;
+		border-width: 10px;
+		border-color: #000000;	
+		border-width: 20px;
+		}
+			
+.menu	{
+		text-align: center;
+		width: 80%;
+		}
 
 
-img {display: block; box-shadow: 0px 5px 5px #ccc; background-color: #c2c2a3; margin-left: auto; margin-right: auto;}	
-img.logo {position: center; margin-left: auto; margin-right: auto; margin-top: 30px; height: 45px; border-radius: 100%; transform: translateY(-50%); padding: 5px; background-color: #c2c2a3; box-shadow: 0px 5px 5px #ccc;border-radius: 15px; border-top: 1px solid #e9e9e9;}
-img.main {margin-left: auto; margin-right: auto;  width: 500px; height: 200px}
 
-table {font-family: Lucida Console, Monaco; border-collapse: collapse; width: 100%; border-color: black; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
-th	{font-family: Lucida Console, Monaco; text-align: center; background-color: black; color: white; border-collapse: collapse; width: 100%; border-color: grey; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
-tr	{background-color: black; color: white;}	
-td.bolder {font-weight: bold; text-align: right; width: 50px;}
-tr:hover {background-color: black;}	
+.menuicon{
+		width: 15%;
+		}	
+.menupipe{
+	width: 1%;
+		}	
 
 
-#displayDateLast {text-align: center; width: 75%; margin-right: auto; margin-left: auto; margin-top: 150px}
-
-
-/* The Modal (background) */
-.modal {display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}  
-.button {background-color: white; border: thin; color: white; padding: 16px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; float: left;}
-/* Modal Content */
-.modal-content { background-color: #303032; margin: auto; padding: 20px; border: 10px; border-style: solid; border-color: #33331a; width: 80%;}
-/* The Close Button */
-.close {color:  #ace600; float: right; font-size: 16px; font-weight: bold;}
-.close:hover, .close:focus {color: black; text-decoration: none; cursor: pointer;}
-
-body {font-family: Lucida Console, Monaco; background-color:  #a3a375; transition: background-color .5s;}
-.sidenav {height: 95%; width: 0; position: fixed; z-index: 1; top: 0; left: 0; background-color: black; color:white; overflow-x: hidden; transition: 0.5s; padding-top: 40px;}
-.sidenav a {padding: 8px 8px 8px 32px; text-decoration: none; font-size: 14px; color: white; display: block; transition: 0.3s;}
-.sidenav a:hover {background-color: grey;}.sidenav .closebtn {position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px; color: white;}
-#main {transition: margin-left .5s; padding: 12px; background-color: #55552b;}@media screen and (max-height: 450px)
-{.sidenav {padding-top: 12px;}.sidenav a {font-size: 14px;}}
-
-footer {position: fixed; left: 0; bottom: 0; width: 100%; height: 50px; background-color: #55552b; color: white; text-align: left;}
-
-.fa {padding: 10px; font-size: 30px; text-align: center; text-decoration: none; margin: 5px 2px;}
-.fa:hover {opacity: 0.7;}
-.fa-facebook {background: #3B5998; color: white;}
-.fa-twitter {background: #55ACEE; color: white; margin-left: 250px;}
-.align-center {text-align:center;}
-
-.dropbtn {background-color: black; color: white; padding: 12px;
-font-size: 14px; border: none;}
-.dropdown {position: relative; display: inline-block;}
-.dropdown-content {display: none; position: absolute; background-color: #f1f1f1;
-min-width: 190px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
-.dropdown-content a {color: black; padding: 2px 2px; font-size: 14px; text-decoration: none; display: block;}
-.dropdown-content a:hover {background-color:black; color:white;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #f1f1f1; color: black}
-.align-center {text-align: center;}
-
-table {margin-left: auto; margin-right: auto; width: 70%;}
-.block {width: 50%; margin-right: auto; margin-left: auto;}
-.center-div {width: 70%; margin-right: auto; margin-left: auto;}
-.header-text {font-family: Lucida Console, Monaco; font-size: 12pt; font-weight: bold; text-align: center;}
-.center-items {text-align: center;}
-.right-align {text-align: right; width: 50%;}
-.left-align {text-align: left; width: 50%;}
-#displayDateLast {text-align: left;	width: 50%;	margin-right: auto;	margin-left: auto;}
-
+caption	{
+		caption-side: bottom;
+		font-style: italic;
+		}
