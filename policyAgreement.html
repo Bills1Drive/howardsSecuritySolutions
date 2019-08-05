@@ -1,30 +1,83 @@
-<!--
-Home Page
-Daniel Howard
-CSC-1300-800-S19
-11Feb18--> 
-
 <!DOCTYPE HTML>
-
-<html lang="en">
+<html lang="en-US">
 <head>
 <meta charset="utf-8" />
-<title>Howards Website</title>
+<script type="text/javascript">
+var salesAmt
+var loanAmt
+var loanRate
+var loanYears
+	
+function validSalesAmt() {
+var salesAmt=parseInt(homeLoanForm.SaleAmount.value,10)
+var downPmtAmt=parseInt(homeLoanForm.DownPayment.value,10)
+loanAmt = salesAmt-downPmtAmt
+homeLoanForm.LoanAmount.value = loanAmt
+homeLoanForm.Rate.focus()
+}
+function CalcLoanAmt() {
+    loanRate=parseFloat(homeLoanForm.Rate.value)
+    loanYears=homeLoanForm.Years.value
+    var monthlyPmtAmt = monthlyPmt(loanAmt,loanRate,loanYears)
+    homeLoanForm.Payment.value=dollarFormat(monthlyPmtAmt.toString())
+}
+function monthlyPmt(loanAmt,loanRate,loanYears) {
+    var interestRate = loanRate/1200
+    var Pmts = loanYears * 12
+    var Amnt = loanAmt * (interestRate / (1 - (1 / Math.pow(1+interestRate,Pmts))))
+    return Amnt.toFixed(2)
+}
+function dollarFormat(valuein) {
+    var formatValue = ""
+    var formatDollars = ""
+    formatAmt = valuein.split(".",2)     
+    var dollars = formatAmt[0]
+    var dollarLen = dollars.length
+    if (dollarLen > 3) {
+       while (dollarLen > 0) {
+             tempDollars = dollars.substring(dollarLen - 3,dollarLen)
+             if (tempDollars.length == 3) {
+                formatDollars = ","+tempDollars+formatDollars
+                dollarLen = dollarLen - 3
+             } else {
+                  formatDollars=tempDollars+formatDollars
+                  dollarLen = 0
+               }
+       }
+       if (formatDollars.substring(0,1) == ",")
+          dollars = formatDollars.substring(1,formatDollars.length)
+       else
+          dollars = formatDollars
+   }
+       var cents = formatAmt[1]
+       var formatValue = "$"+dollars+"."+cents
+       return formatValue
+}
+function copyRight() {
+	var lastModDate = document.lastModified
+	var lastModDate = lastModDate.substring(0,10)
+	displayDateLast.innerHTML = "<h6>&copy; Howards Web Design INC."+"<br />This document was last modified on:<br />" + lastModDate +".</h6>"
+   }
+</script>
+<title>Howard's Technical Innovations</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <!--Body-->
-<body>
 <div style="text-align: center">
-	<img src="image/fireworks.JPG" width="1000" height="300" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888" />
+	<img src="fireworks.JPG" width="1000" height="300" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888" />
 </div>
-<h1 align="center">Howard's webdesign Inc.</h1>
+<body>
+<br />
+<div class="example1">
+	<h3>Howard's Technical Innovations</h3>
+</div>
 <br />
 <!--Menu-->
 <table class="menu" style="box-shadow: 10px 10px 12px #888888">
 	<tr>	
- 	<td class="menuicon">
+	<td class="menuicon" align="center">
 	<div class="dropdown">
-	<button class="dropbtn">Links</button>		
+	<button class="dropbtn" align="center">Links</button>		
 		<div class="dropdown-content">
 			<a href="home.html">Home</a>
 			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The at APP!</a>	
@@ -35,7 +88,7 @@ CSC-1300-800-S19
 	</td>
 	</div>
 	
-	<td class="menuicon">
+	<td class="menuicon" align="center">
 	<div class="dropdown">
 	<button class="dropbtn">Business</button>
 		<div class="dropdown-content">
@@ -48,18 +101,22 @@ CSC-1300-800-S19
 	</td>
 	</div>
 	
-	<td class="menuicon">
+	<td class="menuicon" align="center">
 	<div class="dropdown">		
 	<button class="dropbtn">Programming</button>
 		<div class="dropdown-content">
-			<a href="binaryToDecimal.html">Binary To Decimal &nbsp; &nbsp;</a>
-			<a href="hexadecimal.html">Hexadecimal &nbsp; &nbsp;</a>	
-			<a href="ascii.html">ascii &nbsp; &nbsp;</a>
-			<a href="calculations.html">Calculations &nbsp; &nbsp;</a>
-			<a href="grocries.html">Grocries &nbsp; &nbsp;</a>
+			<a href="binaryToDecimal.html">Binary To Decimal</a>
+			<a href="hexadecimal.html">Hexadecimal</a>	
+			<a href="ascii.html">ascii</a>
+			<a href="calculations.html">Calculations</a>
+			<a href="grocries.html">Grocries</a>
 		</div>
 		<td class="menupipe">|</td>
 	</td>
 	</div>	
+	</tr>
 </table>
-<br style="clear: left" />
+<br />
+
+</body>
+</html>
