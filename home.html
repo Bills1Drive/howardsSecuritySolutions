@@ -8,17 +8,7 @@ CSC-1300-800-S19
 <head>
 <meta charset="utf-8" />
 <script type="text/javascript">
-<!-- Hide from old browser
-var adMsg=" ** Welcome to my page I hope you enjoy!!! ** "
-var beginPos=0
-function scrollingMsg() {
-	msgForm.scrollingMsg.value=adMsg.substring(beginPos, adMsg.length)+adMsg.substring(0,beginPos)
-	beginPos=beginPos+1
-	if (beginPos>adMsg.length) {
-		beginPos=0
-	}
-	window.setTimeout("scrollingMsg()",500)
-}
+
 var salesAmt
 var loanAmt
 var loanRate
@@ -84,20 +74,19 @@ function copyRight() {
 	<img src="fireworks.JPG" width="1000" height="300" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888" />
 </div>
 
-<body onLoad="scrollingMsg(); scrollColor(); countDown(); copyRight()">
-<form id="msgForm">
-	<p style="text-align:center"><input type="text" name="scrollingMsg" size="40" /></p>
-</form>
+<body>
+<div class="example1">
+<h3>Howard's Technical Innovations</h3>
+</div>
 <br />
-<h1 align="center">Howard's webdesign Inc.</h1>
-<br />
+
 
 <!--Menu-->
 <table class="menu" style="box-shadow: 10px 10px 12px #888888">
 	<tr>	
-	<td class="menuicon">
+	<td class="menuicon" align="center">
 	<div class="dropdown">
-	<button class="dropbtn">Links</button>		
+	<button class="dropbtn" align="center">Links</button>		
 		<div class="dropdown-content">
 			<a href="home.html">Home</a>
 			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The at APP!</a>	
@@ -108,7 +97,7 @@ function copyRight() {
 	</td>
 	</div>
 	
-	<td class="menuicon">
+	<td class="menuicon" align="center">
 	<div class="dropdown">
 	<button class="dropbtn">Business</button>
 		<div class="dropdown-content">
@@ -121,7 +110,7 @@ function copyRight() {
 	</td>
 	</div>
 	
-	<td class="menuicon">
+	<td class="menuicon" align="center">
 	<div class="dropdown">		
 	<button class="dropbtn">Programming</button>
 		<div class="dropdown-content">
