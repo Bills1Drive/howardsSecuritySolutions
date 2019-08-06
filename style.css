@@ -47,16 +47,15 @@
 }
 }
 
-#displayDateLast {
-	text-align: left;
-	width: 50%;
-	margin-right: auto;
-	margin-left: auto;
+#displayDateLast {text-align: left; width: 50%;
+margin-right: auto; margin-left: auto;
 }
 
-body	{font-family: Centaur, "Century Gothic", Arial;	font-size: 14pt; 
-	     background-image: url("blackbackground.jpg");}	
-
+body {font-family: Centaur, "Century Gothic", Arial;
+font-size: 14pt; margin-right: auto; margin-left: auto;
+background-image: url("blackbackground.jpg");
+}	
+		
 /* Style the header / Uncomment if needed.
 header {background-color: white; padding: 5px;
   text-align: center;
@@ -65,25 +64,17 @@ header {background-color: white; padding: 5px;
 } */
 
 /* Container for flexboxes */
-section {
-  display: -webkit-flex;
-  display: flex;
+section {display: -webkit-flex; display: flex;
 }
+
 /* Style the content */
-article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  background-color: #55552b;
-  padding: 10px;
+article {-webkit-flex: 3; -ms-flex: 3;
+flex: 3; background-color: #55552b; padding: 10px;
 }
 
 /* Style the footer */
-footer {
-  background-color: black;
-  padding: 10px;
-  text-align: center;
-  color: black;
+footer { background-color: black; padding: 10px;
+text-align: center; color: black;
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
@@ -91,6 +82,8 @@ footer {
   section {
     -webkit-flex-direction: column;
     flex-direction: column;
+	margin-right: auto;
+	margin-left: auto;
   }
 }
 
@@ -133,10 +126,8 @@ tr:hover {background-color: black;}
 .close {color:  #ace600; float: right; font-size: 16px; font-weight: bold;}
 .close:hover, .close:focus {color: black; text-decoration: none; cursor: pointer;}
 
-body {font-family: Lucida Console, Monaco; background-color:  #a3a375; transition: background-color .5s;}
-.sidenav {height: 95%; width: 0; position: fixed; z-index: 1; top: 0; left: 0; background-color: black; color:white; overflow-x: hidden; transition: 0.5s; padding-top: 40px;}
-.sidenav a {padding: 8px 8px 8px 32px; text-decoration: none; font-size: 14px; color: white; display: block; transition: 0.3s;}
-.sidenav a:hover {background-color: grey;}.sidenav .closebtn {position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px; color: white;}
+body {font-family: Lucida Console, Monaco; background-color:  #a3a375; transition: background-color .5s; margin-right: auto; margin-left: auto;}
+
 #main {transition: margin-left .5s; padding: 12px; background-color: #55552b;}@media screen and (max-height: 450px)
 {.sidenav {padding-top: 12px;}.sidenav a {font-size: 14px;}}
 
