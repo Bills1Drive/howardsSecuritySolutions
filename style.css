@@ -54,8 +54,7 @@
 	margin-left: auto;
 }
 
-body	{font-family: Centaur, "Century Gothic", Arial;	font-size: 14pt; 
-	     background-image: url("blackbackground.jpg");}	
+body {font-family: Centaur, "Century Gothic", Arial; background-image: url("blackbackground.jpg");}	
 
 /* Style the header / Uncomment if needed.
 header {background-color: white; padding: 5px;
