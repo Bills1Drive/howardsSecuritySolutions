@@ -1,28 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-<style>
-/* Google map's API css style */
-#map {
-height: 100%;
-  }
-  html, body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-  }
-  
-/* Set the size of the div element for google map */
-#map {
-height: 400px;  
-	width: 100%; 
-	}
-
-span.label {
-  font-family: serif;
-  font-weight: normal;
-}
-</style> 
 <meta charset="utf-8" />
 <script type="text/javascript">
 var salesAmt
@@ -117,7 +95,7 @@ function copyRight() {
 			<a href="prices.html">Prices & Specials</a>
 			<a href="policyAgreement.html">Policy Aggrement</a>
 			<a href="affiliations.html">Affliations</a>			
-			<a href="certs.html">Certifications</a>			
+						
 		</div>	
 		<td class="menupipe">|</td>
 	</td>
@@ -138,28 +116,42 @@ function copyRight() {
 	</td>
 	</div>	
 	</tr>
+	<tr>
+	<td class="menuicon" align="center">
+	<div class="dropdown">		
+	<button class="dropbtn">About</button>
+		<div class="dropdown-content">
+			<a href="resume.html">Resume</a>
+			<a href="mission.html">Mission</a>
+			<a href="certs.html">Certifications</a>
+			<a href="myphotography.html">Photography</a>
+		</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>	
+	
+	<td class="menuicon" align="center">
+	<div class="dropdown">		
+	<button class="dropbtn">Comin Soon</button>
+		<div class="dropdown-content">
+			<a href="resume.html">Comin Soon</a>
+	    	</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>
+
+	<td class="menuicon" align="center">
+	<div class="dropdown">		
+	<button class="dropbtn">Comin Soon</button>
+		<div class="dropdown-content">
+			<a href="resume.html">Comin Soon</a>
+	    	</div>
+		<td class="menupipe">|</td>
+	</td>
+	</div>	
+	
+	</tr>
 </table>
 <br />
 
-<h1 align="center"> Welcome To My google Maps page. </h1>
-<!--Google Map-->
-<div class="w3-display-container"></div>	
-<br><br />
-
-</body>
-
-<!--Script for Google Maps-->
-<script>
-	var map;
-	function initMap() {
-		map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 39.011902, lng: -98.484245},
-		zoom: 4
-		});
-	}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfY28Ay4PMWoga2BCJmNlAZzwe9025g24&callback=initMap"
-async defer></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfY28Ay4PMWoga2BCJmNlAZzwe9025g24&libraries=places"></script>
-<!--End script for Google Maps-->
-</html>
+<h4 align="center"> Welcome To My google Maps page. </h4>
