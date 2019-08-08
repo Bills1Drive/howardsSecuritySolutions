@@ -1,66 +1,99 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-<meta charset="utf-8" />
-<script type="text/javascript">
-var salesAmt
-var loanAmt
-var loanRate
-var loanYears
-	
-function validSalesAmt() {
-var salesAmt=parseInt(homeLoanForm.SaleAmount.value,10)
-var downPmtAmt=parseInt(homeLoanForm.DownPayment.value,10)
-loanAmt = salesAmt-downPmtAmt
-homeLoanForm.LoanAmount.value = loanAmt
-homeLoanForm.Rate.focus()
-}
-function CalcLoanAmt() {
-    loanRate=parseFloat(homeLoanForm.Rate.value)
-    loanYears=homeLoanForm.Years.value
-    var monthlyPmtAmt = monthlyPmt(loanAmt,loanRate,loanYears)
-    homeLoanForm.Payment.value=dollarFormat(monthlyPmtAmt.toString())
-}
-function monthlyPmt(loanAmt,loanRate,loanYears) {
-    var interestRate = loanRate/1200
-    var Pmts = loanYears * 12
-    var Amnt = loanAmt * (interestRate / (1 - (1 / Math.pow(1+interestRate,Pmts))))
-    return Amnt.toFixed(2)
-}
-function dollarFormat(valuein) {
-    var formatValue = ""
-    var formatDollars = ""
-    formatAmt = valuein.split(".",2)     
-    var dollars = formatAmt[0]
-    var dollarLen = dollars.length
-    if (dollarLen > 3) {
-       while (dollarLen > 0) {
-             tempDollars = dollars.substring(dollarLen - 3,dollarLen)
-             if (tempDollars.length == 3) {
-                formatDollars = ","+tempDollars+formatDollars
-                dollarLen = dollarLen - 3
-             } else {
-                  formatDollars=tempDollars+formatDollars
-                  dollarLen = 0
-               }
-       }
-       if (formatDollars.substring(0,1) == ",")
-          dollars = formatDollars.substring(1,formatDollars.length)
-       else
-          dollars = formatDollars
-   }
-       var cents = formatAmt[1]
-       var formatValue = "$"+dollars+"."+cents
-       return formatValue
-}
-function copyRight() {
-	var lastModDate = document.lastModified
-	var lastModDate = lastModDate.substring(0,10)
-	displayDateLast.innerHTML = "<h6>&copy; Howards Web Design INC."+"<br />This document was last modified on:<br />" + lastModDate +".</h6>"
-   }
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Howard's Innovations</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
+<style>
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<title>Howard's Innovations</title>
 <div style="text-align: center">
 	<img src="fireworks.JPG" width="1000" height="300" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888" />
 </div>
@@ -79,7 +112,7 @@ function copyRight() {
 		<div class="dropdown-content">
 			<a href="https://howardssecuritysolutions.com">Back_To_Main</a>
 			<a href="https://bills1drive.github.io/howardssecuritysolutions/secondHome.html">Home</a>
-			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The at APP!</a>	
+			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The Fat APP!</a>	
 			<a href="https://howardssecuritysolutions.com">Login</a>
 			<a href="contact.html">Contact Me</a>			
 		</div>
@@ -93,8 +126,7 @@ function copyRight() {
 		<div class="dropdown-content">
 			<a href="prices.html">Prices & Specials</a>
 			<a href="policyAgreement.html">Policy Aggrement</a>
-			<a href="affiliations.html">Affliations</a>			
-						
+			<a href="affiliations.html">Affliations</a>							
 		</div>	
 		<td class="menupipe">|</td>
 	</td>
@@ -123,16 +155,15 @@ function copyRight() {
 			<a href="resume.html">Resume</a>
 			<a href="mission.html">Mission</a>
 			<a href="certs.html">Certifications</a>
-			<a href="photography.html">Photography</a>
 		</div>
 		<td class="menupipe">|</td>
 	</td>
 	</div>
 	<td class="menuicon" align="center">
 	<div class="dropdown">		
-	<button class="dropbtn">Comin Soon</button>
+	<button class="dropbtn">Photography</button>
 		<div class="dropdown-content">
-			<a href="soon2.html">Comin Soon</a>
+			<a href="photography.html">Photography</a>
 	    	</div>
 		<td class="menupipe">|</td>
 	</td>
@@ -149,43 +180,109 @@ function copyRight() {
 	</div>
 </table>
 </head>
+
+
+
 <body>
-<div style="text-align:center">
-  <h2>Tabbed Image Gallery</h2>
-  <p>Click on the images below:</p>
-</div>
 
-<!-- The four columns -->
-<div class="row">
-  <div class="column">
-    <img src="ballgame(1).jpg" alt="ballgame(1)" style="width:100%" onclick="myFunction(this);">
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="image/ballgame(1).jpg" style="width:100%" onclick="currentSlide(1)" alt="Durham BullDogs">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image/ballgame(2).jpg" style="width:100%" onclick="currentSlide(2)" alt="Train at the Game">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="image/Disney(4).jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="image/Disney(2).jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="image/house3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Painting">
+    </div>
+	
+	
+    <div class="column">
+      <img class="demo cursor" src="image/house5.jpg" style="width:100%" onclick="currentSlide(4)" alt="Painting">
+    </div>
+	
+    
+    
   </div>
-  <div class="column">
-    <img src="ballgame(2).jpg" alt="ballgame(2)" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="cloud.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="Disney(1).jpg" alt="Disney" style="width:100%" onclick="myFunction(this);">
-  </div>
-</div>
-
+ <br /> 
+ 
 <div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:100%">
-  <div id="imgtext"></div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="image/ballgame(1).jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="image/ballgame(2).jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="image/cloud.jpg" style="width:50%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="image/Disney(1).jpg" style="width:50%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="image/house3.jpg" style="width:50%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="image/house5.jpg" style="width:50%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
 </div>
 
-<script>
-function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
-}
-</script>
 
 </body>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+   
 </html>
