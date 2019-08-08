@@ -78,7 +78,7 @@ function copyRight() {
 	<button class="dropbtn" align="center">Links</button>		
 		<div class="dropdown-content">
 			<a href="https://howardssecuritysolutions.com">Back_To_Main</a>
-			<a href="https://howardssecuritysolutions.com/home.html">This_Is_Home</a>
+			<a href="https://howardssecuritysolutions.com/ThisHome.html">This_Is_Home</a>
 			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The at APP!</a>	
 			<a href="https://howardssecuritysolutions.com">Login</a>
 			<a href="contact.html">Contact Me</a>			
@@ -123,7 +123,7 @@ function copyRight() {
 			<a href="resume.html">Resume</a>
 			<a href="mission.html">Mission</a>
 			<a href="certs.html">Certifications</a>
-			<a href="myphotography.html">Photography</a>
+			<a href="photography.html">Photography</a>
 		</div>
 		<td class="menupipe">|</td>
 	</td>
@@ -147,7 +147,45 @@ function copyRight() {
 		<td class="menupipe">|</td>
 	</td>
 	</div>
-</head>	
+</table>
+</head>
 <body>
+<div style="text-align:center">
+  <h2>Tabbed Image Gallery</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="img_nature.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img_snow.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img_mountains.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img_lights.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
 </body>
 </html>
