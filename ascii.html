@@ -2,63 +2,6 @@
 <html lang="en-US">
 <head>
 <meta charset="utf-8" />
-<script type="text/javascript">
-var salesAmt
-var loanAmt
-var loanRate
-var loanYears
-	
-function validSalesAmt() {
-var salesAmt=parseInt(homeLoanForm.SaleAmount.value,10)
-var downPmtAmt=parseInt(homeLoanForm.DownPayment.value,10)
-loanAmt = salesAmt-downPmtAmt
-homeLoanForm.LoanAmount.value = loanAmt
-homeLoanForm.Rate.focus()
-}
-function CalcLoanAmt() {
-    loanRate=parseFloat(homeLoanForm.Rate.value)
-    loanYears=homeLoanForm.Years.value
-    var monthlyPmtAmt = monthlyPmt(loanAmt,loanRate,loanYears)
-    homeLoanForm.Payment.value=dollarFormat(monthlyPmtAmt.toString())
-}
-function monthlyPmt(loanAmt,loanRate,loanYears) {
-    var interestRate = loanRate/1200
-    var Pmts = loanYears * 12
-    var Amnt = loanAmt * (interestRate / (1 - (1 / Math.pow(1+interestRate,Pmts))))
-    return Amnt.toFixed(2)
-}
-function dollarFormat(valuein) {
-    var formatValue = ""
-    var formatDollars = ""
-    formatAmt = valuein.split(".",2)     
-    var dollars = formatAmt[0]
-    var dollarLen = dollars.length
-    if (dollarLen > 3) {
-       while (dollarLen > 0) {
-             tempDollars = dollars.substring(dollarLen - 3,dollarLen)
-             if (tempDollars.length == 3) {
-                formatDollars = ","+tempDollars+formatDollars
-                dollarLen = dollarLen - 3
-             } else {
-                  formatDollars=tempDollars+formatDollars
-                  dollarLen = 0
-               }
-       }
-       if (formatDollars.substring(0,1) == ",")
-          dollars = formatDollars.substring(1,formatDollars.length)
-       else
-          dollars = formatDollars
-   }
-       var cents = formatAmt[1]
-       var formatValue = "$"+dollars+"."+cents
-       return formatValue
-}
-function copyRight() {
-	var lastModDate = document.lastModified
-	var lastModDate = lastModDate.substring(0,10)
-	displayDateLast.innerHTML = "<h6>&copy; Howards Web Design INC."+"<br />This document was last modified on:<br />" + lastModDate +".</h6>"
-   }
-</script>
 <title>Howard's Innovations</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <div style="text-align: center">
@@ -79,7 +22,7 @@ function copyRight() {
 		<div class="dropdown-content">
 			<a href="https://howardssecuritysolutions.com">Back_To_Main</a>
 			<a href="https://bills1drive.github.io/howardssecuritysolutions/secondHome.html">Home</a>
-			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The at APP!</a>	
+			<a href="https://howardssecuritysolutions.com/community-chat/">Chew The Fat APP!</a>	
 			<a href="https://howardssecuritysolutions.com">Login</a>
 			<a href="contact.html">Contact Me</a>			
 		</div>
@@ -123,16 +66,15 @@ function copyRight() {
 			<a href="resume.html">Resume</a>
 			<a href="mission.html">Mission</a>
 			<a href="certs.html">Certifications</a>
-			<a href="photography.html">Photography</a>
 		</div>
 		<td class="menupipe">|</td>
 	</td>
 	</div>
 	<td class="menuicon" align="center">
 	<div class="dropdown">		
-	<button class="dropbtn">Comin Soon</button>
+	<button class="dropbtn">Photography</button>
 		<div class="dropdown-content">
-			<a href="soon2.html">Comin Soon</a>
+			<a href="photography.html">Photography</a>
 	    	</div>
 		<td class="menupipe">|</td>
 	</td>
@@ -140,14 +82,13 @@ function copyRight() {
 
 	<td class="menuicon" align="center">
 	<div class="dropdown">		
-	<button class="dropbtn">Comin Soon</button>
+	<button class="dropbtn">Help Support</button>
 		<div class="dropdown-content">
-			<a href="soon1.html">Comin Soon</a>
+			<a href="soon1.html">Donations</a>
 	    	</div>
 		<td class="menupipe">|</td>
 	</td>
 	</div>
-</table>
 </head>
 <body>
 <table>
