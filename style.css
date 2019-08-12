@@ -56,7 +56,7 @@ p.box {width: 400px; margin-left: auto; margin-right:auto; margin-top: 100px; bo
 #displayDateLast {text-align: center;	width: 50%;	margin-right: auto;	margin-left: auto;}
 
 body {font-family: Lucida Console, Monaco; background-image: url("blackbackground.jpg");}	
-	.column {float: right; width: 25%; padding: 10px;}
+	.column {float: center; width: 25%; padding: 10px;}
 
 /* Style the images inside the grid */
 	.column img {opacity: 0.8; cursor: pointer;}
