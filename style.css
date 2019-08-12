@@ -50,8 +50,6 @@ p.box {width: 400px; margin-left: auto; margin-right:auto; margin-top: 100px; bo
  -webkit-transform: translateX(-100%); /* Firefox bug fix */
  transform: translateX(-100%); 
 	}}
- 
-
 
 #displayDateLast {text-align: center;	width: 50%;	margin-right: auto;	margin-left: auto;}
 
@@ -85,7 +83,7 @@ article {-webkit-flex: 3; -ms-flex: 3; flex: 3; background-color: #55552b; paddi
 footer {background-color: black; padding: 10px; text-align: center; color: white;}
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
+@media (max-width: 800px; right-align: auto; left-align:auto) {
   section {-webkit-flex-direction: column; flex-direction: column;}
   }
   
