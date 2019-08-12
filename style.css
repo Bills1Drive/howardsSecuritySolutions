@@ -56,7 +56,7 @@ p.box {margin-left: auto; margin-right:auto; width: 400px; margin-left: auto; ma
 #displayDateLast {text-align: center;	width: 50%;	margin-right: auto;	margin-left: auto;}
 
 body {margin-left: auto; margin-right; auto; font-family: Lucida Console, Monaco; background-image: url("blackbackground.jpg");}	
-	.column {float: left; width: 25%; padding: 10px;}
+	.column {float: center; width: 25%; padding: 10px;}
 
 /* Style the images inside the grid */
 	.column img {opacity: 0.8; cursor: pointer;}
@@ -67,7 +67,7 @@ body {margin-left: auto; margin-right; auto; font-family: Lucida Console, Monaco
 	.row:after {content: ""; display: table; clear: both;}
 
 /* The expanding image container */
-.container {position: relative; display: none;}
+.container {position: center; display: none;}
 
 /* Expanding image text */
 #imgtext {position: absolute; bottom: 15px; left: 15px; color: white; font-size: 20px;}
