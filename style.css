@@ -93,7 +93,7 @@ img {display: block; box-shadow: 0px 5px 5px #ccc; background-color: black; marg
 img.logo {position: center; margin-left: auto; margin-right: auto; margin-top: 30px; height: 45px; border-radius: 100%; transform: translateY(-50%); padding: 5px; background-color: black; box-shadow: 0px 5px 5px #ccc;border-radius: 15px; border-top: 1px solid #e9e9e9;}
 img.main {margin-left: auto; margin-right: auto;  width: 500px; height: 200px}
 
-table {margin-left: auto; font-family: Lucida Console, Monaco; border-collapse: collapse; width: 70%; border-color: black; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
+table {margin-left: auto; margin-right: auto; font-family: Lucida Console, Monaco; border-collapse: collapse; width: 70%; border-color: black; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
 .block {text-align: center; width: 70%; }
 .center-div {text-align: center; width: 70%; }
 .header-text {font-family: Lucida Console, Monaco; text-align: center; font-size: 14pt; font-weight: bold;}
