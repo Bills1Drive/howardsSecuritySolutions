@@ -1,16 +1,17 @@
-h1 {margin-left: auto; margin-right:auto; font-family: Lucida Console, Monaco; font-size: 55px; color: white;}
-h2 {margin-left: auto; margin-right:auto; font-family: Lucida Console, Monaco; font-size: 50px; color: white;}
-h3, legend{margin-left: auto; margin-right:auto; font-family: Lucida Console, Monaco; font-size: 26px; color: white;}
-h4, p, a{margin-left: auto; margin-right:auto; font-family: Lucida Console, Monaco; font-size: 18px; color: white;}
-h5 {margin-left: auto; margin-right:auto; font-family: Lucida Console, Monaco; font-size: 14px; color: white;}
-h6 {margin-left: auto; margin-right:auto; font-family: Lucida Console, Monaco; font-size: 10px; color: white;}
+h1 {font-family: Lucida Console, Monaco; font-size: 55px; color: white;}
+h2 {font-family: Lucida Console, Monaco; font-size: 50px; color: white;}
+h3, legend{font-family: Lucida Console, Monaco; font-size: 26px; color: white;}
+h4, p, a{font-family: Lucida Console, Monaco; font-size: 18px; color: white;}
+h5 {font-family: Lucida Console, Monaco; font-size: 14px; color: white;}
+h6 {font-family: Lucida Console, Monaco; font-size: 10px; color: white;}
 hr {border-color: #40ff00;}
-p.box {margin-left: auto; margin-right:auto; width: 400px; margin-left: auto; margin-right:auto; margin-top: 100px; border-radius: 5px; padding: 10px; background-color: white; color: white;}
+p.box {width: 400px; margin-left: auto; margin-right:auto; margin-top: 100px; border-radius: 5px; padding: 10px; background-color: white; color: white;}
      
 .example1 {
  height: 50px;
- position: center;
+ position: relative;
 }
+
 .example1 h3 {
  font-size: 3em;
  color: white;
@@ -50,13 +51,12 @@ p.box {margin-left: auto; margin-right:auto; width: 400px; margin-left: auto; ma
  transform: translateX(-100%); 
 	}}
  
-* {box-sizing: border-box;}
 
 
 #displayDateLast {text-align: center;	width: 50%;	margin-right: auto;	margin-left: auto;}
 
-body {margin-left: auto; margin-right; auto; font-family: Lucida Console, Monaco; background-image: url("blackbackground.jpg");}	
-	.column {float: center; width: 25%; padding: 10px;}
+body {font-family: Lucida Console, Monaco; background-image: url("blackbackground.jpg");}	
+	.column {float: right; width: 25%; padding: 10px;}
 
 /* Style the images inside the grid */
 	.column img {opacity: 0.8; cursor: pointer;}
@@ -67,7 +67,7 @@ body {margin-left: auto; margin-right; auto; font-family: Lucida Console, Monaco
 	.row:after {content: ""; display: table; clear: both;}
 
 /* The expanding image container */
-.container {position: center; display: none;}
+.container {position: relative; display: none;}
 
 /* Expanding image text */
 #imgtext {position: absolute; bottom: 15px; left: 15px; color: white; font-size: 20px;}
@@ -93,7 +93,7 @@ img {display: block; box-shadow: 0px 5px 5px #ccc; background-color: black; marg
 img.logo {position: center; margin-left: auto; margin-right: auto; margin-top: 30px; height: 45px; border-radius: 100%; transform: translateY(-50%); padding: 5px; background-color: black; box-shadow: 0px 5px 5px #ccc;border-radius: 15px; border-top: 1px solid #e9e9e9;}
 img.main {margin-left: auto; margin-right: auto;  width: 500px; height: 200px}
 
-table {margin-left: auto; margin-right: auto; font-family: Lucida Console, Monaco; border-collapse: collapse; width: 70%; border-color: black; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
+table {font-family: Lucida Console, Monaco; border-collapse: collapse; width: 70%; border-color: black; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
 .block {text-align: center; width: 70%; }
 .center-div {text-align: center; width: 70%; }
 .header-text {font-family: Lucida Console, Monaco; text-align: center; font-size: 14pt; font-weight: bold;}
@@ -101,21 +101,13 @@ table {margin-left: auto; margin-right: auto; font-family: Lucida Console, Monac
 .right-align {text-align: right; width: 50%;}
 .left-align {text-align: left; width: 50%;}
 
-th {font-family: Lucida Console, Monaco; text-align: center; background-color: black; color: white; border-collapse: collapse; width: 100%; border-color: grey; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
+th{font-family: Lucida Console, Monaco; text-align: center; background-color: black; color: white; border-collapse: collapse; width: 100%; border-color: grey; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
 tr {background-color: black; color: white;}	
 td.bolder {font-weight: bold; text-align: center; width: 50px;}
 tr:hover {background-color: black;}	
 
 #displayDateLast {text-align: center; width: 75%; margin-right: auto; margin-left: auto; margin-top: 150px}
-
-
-footer {position: fixed; left: 0; bottom: 0; width: 100%; height: 50px; background-color:black; color: white; text-align: left;}
-
-.fa {padding: 10px; font-size: 30px; text-align: center; text-decoration: none; margin: 5px 2px;}
-.fa:hover {opacity: 0.7;}
-.fa-facebook {background: white; color: white;}
-.fa-twitter {background: #55ACEE; color: white; margin-left: 250px;}
-.align-center {text-align:center;}
+ 
 
 .dropbtn {background-color: black; color: white; padding: 12px;
 font-size: 16px; border: none;}
