@@ -101,30 +101,13 @@ table {font-family: Lucida Console, Monaco; border-collapse: collapse; width: 70
 .right-align {text-align: right; width: 50%;}
 .left-align {text-align: left; width: 50%;}
 
-th	{font-family: Lucida Console, Monaco; text-align: center; background-color: black; color: white; border-collapse: collapse; width: 100%; border-color: grey; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
-tr	{background-color: black; color: white;}	
+th {font-family: Lucida Console, Monaco; text-align: center; background-color: black; color: white; border-collapse: collapse; width: 100%; border-color: grey; border-style: ridge; border-width: 10px; height: 20px; margin-left: auto; margin-right: auto;}
+tr {background-color: black; color: white;}	
 td.bolder {font-weight: bold; text-align: center; width: 50px;}
 tr:hover {background-color: black;}	
 
 #displayDateLast {text-align: center; width: 75%; margin-right: auto; margin-left: auto; margin-top: 150px}
 
-
-/* The Modal (background) */
-.modal {display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}  
-.button {background-color: white; border: thin; color: white; padding: 16px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; float: left;}
-/* Modal Content */
-.modal-content { background-color: #303032; margin: auto; padding: 20px; border: 10px; border-style: solid; border-color: #33331a; width: 80%;}
-/* The Close Button */
-.close {color:  #ace600; float: right; font-size: 16px; font-weight: bold;}
-.close:hover, .close:focus {color: black; text-decoration: none; cursor: pointer;}
-
-
-.sidenav {height: 95%; width: 0; position: fixed; z-index: 1; top: 0; left: 0; background-color: black; color:white; overflow-x: hidden; transition: 0.5s; padding-top: 40px;}
-
-.sidenav a {padding: 8px 8px 8px 32px; text-decoration: none; font-size: 14px; color: white; display: block; transition: 0.3s;}
-.sidenav a:hover {background-color: grey;}.sidenav .closebtn {position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px; color: white;}
-#main {transition: margin-left .5s; padding: 12px; background-color: #55552b;}@media screen and (max-height: 450px)
-{.sidenav {padding-top: 12px;}.sidenav a {font-size: 14px;}}
 
 footer {position: fixed; left: 0; bottom: 0; width: 100%; height: 50px; background-color:black; color: white; text-align: left;}
 
