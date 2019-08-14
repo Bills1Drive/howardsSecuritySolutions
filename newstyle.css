@@ -7,6 +7,38 @@ h6 {font-family: Lucida Console, Monaco; font-size: 10px; color: white;}
 hr {border-color: #40ff00;}
 
 body {font-family: Lucida Console, Monaco; color: white; background-image: url("blackbackground.jpg");}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
 
 .navbar {width: auto; height: 90px; background-color: black;}
 
@@ -59,7 +91,7 @@ font-family: Lucida Console, Monaco; margin: 0;
 
 img {display: block; box-shadow: 0px 5px 5px #ccc; background-color: black; height: 100px; width: 500px;}	
 img.logo {position: center; margin-left: auto; margin-right: auto; margin-top: 30px; height: 45px; border-radius: 100%; transform: translateY(-50%); padding: 5px; background-color: black; box-shadow: 0px 5px 5px #ccc;border-radius: 15px; border-top: 1px solid #e9e9e9;}
-img.main {margin-left: auto; margin-right: auto; height: 100px; width: 700px;}
+img.main {margin-left: auto; margin-right: auto; height: 300px; width: 500px;}
 
 .responsive {
   margin-left: auto; 
@@ -119,4 +151,4 @@ img.main {margin-left: auto; margin-right: auto; height: 100px; width: 700px;}
 /* Set the size of the div element for google map */
 #map {height: 700px; width: 80%;}
 
-table {color: white;}
+table {color: blue; border-color: blue;}
