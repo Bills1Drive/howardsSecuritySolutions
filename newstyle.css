@@ -256,4 +256,6 @@ th, td {
 
 tr:hover {background-color:#3d3d29; color: white;}
 
-footer {background-color: grey;]
+footer {background-color: grey;}
+
+image {height: 250px; width: 250px;}
