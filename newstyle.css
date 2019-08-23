@@ -45,7 +45,7 @@ body {
 .responsive {
 	padding: 0 6px;
 	float: center;
-	height: 500px;
+	height: auto;
 	width: 100%;
 	position: center;
 	margin-left: auto; 
@@ -246,4 +246,4 @@ footer {
    font-size: 12px; 
 }
 
-image {height: 250px; width: 700px;}
+image {height: 100px; width: 700px;}
