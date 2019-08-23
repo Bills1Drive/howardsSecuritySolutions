@@ -4,6 +4,118 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="newstyle.css" />
 <header>
+<style type="text/css">
+/* keyframes definition for WebKit browsers */
+
+@-webkit-keyframes travel {
+  from { left: 0;     }
+  to   { left: 640px; }
+}
+
+@-webkit-keyframes bounce {
+  from, to  {
+    bottom: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 220px;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {                                     }
+  to   { -webkit-transform: rotateZ(360deg); }
+}
+
+/* keyframes definition for other browsers */
+
+@keyframes travel {
+  from { left: 0;     }
+  to   { left: 640px; }
+}
+
+@keyframes bounce {
+  from, to  {
+    bottom: 0;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 220px;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes spin {
+  from {
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* styles for the stage and animated elements */
+
+#stage {
+  position: relative;
+  margin: 1em auto;
+  width: 705px;
+  height: 400px;
+  border: 2px solid #666;
+  background-image: url("soccerField.JPG");
+}
+
+#traveler {
+  position: absolute;
+  width: 20px;
+  height: 240px;
+
+  -webkit-animation-name: travel;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-duration: 4.8s;
+
+  animation-name: travel;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 4.8s;
+}
+
+#bouncer {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: white;
+  background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+  background: -moz-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+  background: -o-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+  background: -ms-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+  background: radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+
+  -webkit-animation-name: bounce, spin;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 4.2s;
+
+  animation-name: bounce, spin;
+  animation-iteration-count: infinite;
+  animation-duration: 4.2s;
+}
+
+
+</style>
+
+
+</style>
 <div class="center" class="responsive">
 <div class="navbar">  
 	<div class="dropdown"> 
@@ -59,16 +171,25 @@
 	<h3>Howard's Innovations</h3>
 </div>
 <br />
+
+
 </header>
 <br />
 <br />
+
+<div id="stage">
+<div id="traveler">
+<div id="bouncer"><!-- --></div>
+</div>
+</div>
 <body>
-	<div class="w3-container w3-center"> 	 
-		<img src="backToSchool.jpg" class="responsive" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888" />
-	</div>
 	<div style="text-align: center">
-		<p class="w3-xlarge w3-text-white w3-center">Charity Event<br>I would like to start a charity foundation that will help<br>
-		staff and students with supplies. Donations will go directly to Gallberry Farms Elementary school</p>
+		<p class="w3-xlarge w3-text-white w3-center">Charity Event<br>
+		<p>I'm collecting donations for my soccer team the lightning, any help will be appreciated and will directly support the team and Galberry Farm Elementary school.<br /> 
+		Thank you very much,
+		 Respectfully,
+			Daniel Howard.</p>
+		
 	
 	<h4>You can donate here!</h4>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
