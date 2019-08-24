@@ -184,7 +184,7 @@ img.main {
  -moz-transform: translateX(-100%); /* Firefox bug fix */
  -webkit-transform: translateX(-100%); /* Firefox bug fix */
  transform: translateX(-100%); 
-	}}
+	}
 
 .center {margin-right: auto; margin-left: auto; width: 100%;}
 /* Google map's API css style */
@@ -240,7 +240,5 @@ tr:hover {background-color:#3d3d29; color: white;}
 
 }
 
-
-}
 
 image {height: 100px; width: 700px;}
