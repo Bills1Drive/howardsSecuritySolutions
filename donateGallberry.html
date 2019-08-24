@@ -4,12 +4,123 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="newstyle.css" />
 <header>
-<div style="text-align: center">
+<style type="text/css">
+/* keyframes definition for WebKit browsers */
+
+@-webkit-keyframes travel {
+  from { left: 0;     }
+  to   { left: 640px; }
+}
+
+@-webkit-keyframes bounce {
+  from, to  {
+    bottom: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 220px;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {                                     }
+  to   { -webkit-transform: rotateZ(360deg); }
+}
+
+/* keyframes definition for other browsers */
+
+@keyframes travel {
+  from { left: 0;     }
+  to   { left: 640px; }
+}
+
+@keyframes bounce {
+  from, to  {
+    bottom: 0;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 140px;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes spin {
+  from {
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* styles for the stage and animated elements */
+
+#stage {
+  position: relative;
+  margin: 1em auto;
+  width: 705px;
+  height: 400px;
+  border: 2px solid #666;
+  background-image: url("soccerField.jpg");}
+
+#traveler {
+  position: absolute;
+  width: 20px;
+  height: 240px;
+
+  -webkit-animation-name: travel;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-duration: 4.8s;
+
+  animation-name: travel;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 4.8s;
+}
+
+#bouncer {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: white;
+  background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+  background: -moz-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+  background: -o-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+  background: -ms-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+  background: radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+
+  -webkit-animation-name: bounce, spin;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 4.2s;
+
+  animation-name: bounce, spin;
+  animation-iteration-count: infinite;
+  animation-duration: 4.2s;
+}
+
+
+</style>
+
+
+<br />
+<div class="w3-container w3-center"> 
 	<img src="fireworks.JPG" class="responsive" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888;"/>
 </div>
 <br/>
 <div class="center" class="responsive">
-<div class="navbar">  
+<div class="topnav">  
 	<div class="dropdown"> 
     <button class="dropbtn" align="center">Links</button>		
 		<div class="dropdown-content">
@@ -48,34 +159,55 @@
 	<div class="dropdown">		
 	<button class="dropbtn">Charities</button>
 		<div class="dropdown-content">
-			<a href="Charity.html">Back_To_School</a>
+			<a href="donateGalberry.html">Back_To_School</a>
 		</div>
 	</div>
-	<br />		
+	<div class="dropdown">		
+	 <button class="dropbtn">Photography</button>
+		<div class="dropdown-content">
+			<a href="photography.html">My_Photography</a>
+		</div>
+	</div>
+	<div class="dropdown">		
+	 <button class="dropbtn">Shop_Amazon</button>
+		<div class="dropdown-content">
+			<a href="pageAmazon.html">Amazon Shopping</a>
+		</div>
+	</div>
+	<br />	
 </div>
 </div>
-<br />
 
+<br/>
 <div class="example1">
 	<h3>Howard's Innovations</h3>
 </div>
 <br />
+
+
 </header>
 <br />
 <br />
-<body>
 
-<div style="text-align: center">
-	<img src="soccerField.JPG" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888" />
+<div id="stage">
+<div id="traveler">
+<div id="bouncer"><!-- --></div>
 </div>
-<h3 align="center">Fundraising Event</h3>
-	<p>From my experience, I see many teachers use their own money to buy supplies for students. My charity will consist of buying supplies that are cheaper and specific to what they may need.</p>
-	<p>All procedes will direct go to Gallberry Farm Elementary school.</p>
+</div>
+<body>
+	<div style="text-align: center">
+		<p class="w3-xlarge w3-text-white w3-center">Charity Event<br>
+		<p>I'm collecting donations for my soccer team the Lightning, any help will be appreciated. All donations will directly support the team and Gallberry Farm's Elementary school.<br /> 
+		Thank you very much,
+		Respectfully,
+		Daniel Howard.</p>	
+	<b><h4>DONATE HERE!</h4></b>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-		<input type="hidden" name="cmd" value="_s-xclick" />
-		<input type="hidden" name="hosted_button_id" value="S2G2H7M7MTYJW" />
-		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+	<input type="hidden" name="cmd" value="_s-xclick" />
+	<input type="hidden" name="hosted_button_id" value="SH5UDFKJXA6MA" />
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
 	<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
 	</form>
+	</div>
 </body>
 </html>
