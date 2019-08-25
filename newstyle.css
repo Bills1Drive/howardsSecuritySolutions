@@ -109,7 +109,7 @@ font-family: Lucida Console, Monaco; margin: 0;
 }
 
 .dropdown-content a:hover {
-  background-color: white; color: black;
+  background-color: white; color: black; display: center;
 }
 
 .dropdown:hover .dropdown-content {color: black; display: block;}
