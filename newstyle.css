@@ -264,5 +264,7 @@ tr:hover {background-color:#3d3d29; color: white;}
 
 }
 
-
+.iframe {
+	position: center;
+}
 image {height: 100px; width: 700px;}
