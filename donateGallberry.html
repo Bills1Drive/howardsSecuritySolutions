@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="newstyle.css" />
-
 <style>
 /* keyframes definition for WebKit browsers */
 
@@ -96,21 +95,21 @@
   height: 20px;
   border-radius: 10px;
   background: white;
-  background: -webkit-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
-  background: -moz-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
-  background: -o-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
-  background: -ms-radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
-  background: radial-gradient(60% 40%, circle, rgba(255,255,255,0.8), white 50%) white;
+  background: -webkit-radial-gradient(60% 40%, white, rgba(255,255,255,0.8), white 50%) white;
+  background: -moz-radial-gradient(60% 40%, white, rgba(255,255,255,0.8), white 50%) white;
+  background: -o-radial-gradient(60% 40%, white, rgba(255,255,255,0.8), white 50%) white;
+  background: -ms-radial-gradient(60% 40%, white, rgba(255,255,255,0.8), white 50%) white;
+  background: radial-gradient(60% 40%, white, rgba(255,255,255,0.8), white 50%) white;
 
   -webkit-animation-name: bounce, spin;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 4.2s;
-
   animation-name: bounce, spin;
   animation-iteration-count: infinite;
   animation-duration: 4.2s;
 }
 </style>
+<body>
 <br />
 <div class="w3-container w3-center"> 
 	<img src="fireworks.JPG" class="responsive" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888;"/>
@@ -119,10 +118,9 @@
 	<h3>Howard's Innovations</h3>
 </div>
 <br /><br /><br />
-
 <div class="topnav">  
 	<div class="dropdown"> 
-    <button class="dropbtn" align="center">Links</button>		
+    <button class="dropbtn">Links</button>		
 		<div class="dropdown-content">
 			<a class="active" href="https://howardssecuritysolutions.com">Back_To_Main</a>
 			<a class="active" href="https://bills1drive.github.io/howardssecuritysolutions/secondHome.html">Home</a>
@@ -130,7 +128,7 @@
 			<a class="active" href="https://howardssecuritysolutions.com/contact-me/">Contact_Me</a> 			
 		</div>
 	</div>
-	<div class="dropdown" align="center">
+	<div class="dropdown">
 	<button class="dropbtn">Business</button>
 		<div class="dropdown-content">
 			<a href="prices.html">Prices_&_Specials</a>
@@ -176,16 +174,16 @@
 	</div>
 	<br />	
 </div>
-</div>
+
 <br/>
-<body>
+
 <div id="stage">
  <div id="traveler">
   <div id="bouncer"><!-- --></div>
   </div>
  </div>
 <div style="text-align: center">
-		<h3>Charity Event<h3>
+		<h3>Charity Event</h3>
 		<p>I'm collecting donations for my soccer team the Lightning, any help will be appreciated. All donations will directly support the team and Gallberry Farm's Elementary school.<br /> 
 		Thank you very much respectfully,
 		Daniel Howard.</p>	
@@ -193,8 +191,8 @@
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 	<input type="hidden" name="cmd" value="_s-xclick" />
 	<input type="hidden" name="hosted_button_id" value="SH5UDFKJXA6MA" />
-	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-	<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+	<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
 </form>
 </div>
 </body>

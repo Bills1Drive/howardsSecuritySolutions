@@ -88,7 +88,7 @@ div.desc {
 }
 .dropdown .dropbtn {font-size: 16px; border: none; outline: none; 
 color: white; padding: 14px 16px; background-color: black; 
-font-family: Lucida Console, Monaco; margin: 0;
+font-family: Lucida Console, Monaco; margin: 0; text-align: center;
 }
 
 .dropdown-content {
@@ -220,10 +220,12 @@ tr:hover {background-color:#3d3d29; color: white;}
   display: table;
   clear: both;
 }
+/*Menu List*/
 .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .menu li {
@@ -232,6 +234,7 @@ tr:hover {background-color:#3d3d29; color: white;}
   background-color: #33b5e5;
   color: #ffffff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  
 }
 
 .menu li:hover {
@@ -246,6 +249,10 @@ tr:hover {background-color:#3d3d29; color: white;}
   font-size: 14px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+
+
+
+
 
 
 .footer {

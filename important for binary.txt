@@ -1,0 +1,62 @@
+<!---Binary back to decimal -->
+<!---Coming Soon--->
+<!-- <table>
+<tr>
+	<th>Binary to Decimal</th> 
+	<td>Change 1011 to A decimal:</td>
+	<td>Bytes:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+	<td>Power2</td><br><br><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td>
+	<td>Binary turned on:</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td>
+	<td>Now add the represented bit value.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8<td>0</td><td>2</td><td>1</td>
+	<td>8 + 2 = 10</td>
+    <td>10 + 1 = 11</td>	
+	<td>11</td>
+</tr>
+</table>
+<br />
+<table> 
+	<tr><td>Change 111011 to A decimal.</tr></td>
+	<tr><td>Bytes:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+	<tr><td>Power2</td><br><br><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+	<tr><td>Binary turned on:</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr> 
+	<tr><td>Now add the represented bit value.</td><td>0</td><td>0</td><td>32</td><td>16</td><td>8<td>0</td><td>2</td><td>1</td></tr>  
+	<tr><td>32 + 16 = 48</td></tr>
+    <tr><td>48 + 8 = 56</td></tr>
+	<tr><td>56 + 2 = 58</td></tr>
+	<tr><td>58 + 1 = 59</td></tr>
+    <tr><td>59</td></tr>
+</table>
+<br />
+<!---Binary back to decimal -->
+<!--_ <th>Decimal to Binary Numbers</th>
+<table style="border-none">
+	<th>1011</th>
+	<tr><td>Change 1011 to A decimal:</td></tr>
+    <tr><td>Bytes:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>  
+	<tr><td>Power2</td><br><br><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+	<tr><td>Binary turned on:</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td></tr> 	
+	<tr><td>Now add the represented bit value.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8<td>0</td><td>2</td><td>1</td></tr>  
+	<tr><td>Decimal Number result for 1011:</td></tr>
+	<tr><td>8 + 2 = 10</td></tr>
+    <tr><td>10 + 1 = 11</td></tr>	
+	<tr><td>11</td></tr>	
+</table>
+
+<table style="border-none"> 
+	<th>111011</th>
+	<tr><td>Change 111011 to A decimal.</tr><td>
+	<tr><td>Bytes:</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+	<tr><td>Power2</td><br><br><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+	<tr><td>Binary turned on:</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr> 
+	<tr><td>Now add the represented bit value.</td><td>0</td><td>0</td><td>32</td><td>16</td><td>8<td>0</td><td>2</td><td>1</td></tr>  
+</table>
+<table>
+	<tr><td>Change 111011 to A decimal.</td></tr>
+	<tr><td>32 + 16 = 48</td></tr>
+    <tr><td>48 + 8 = 56</td></tr>
+	<tr><td>56 + 2 = 58</td></tr>
+	<tr><td>58 + 1 = 59</td></tr>
+    <tr><td>59</td></tr>
+</table>
+</body>
+</html>
