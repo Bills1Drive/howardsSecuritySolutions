@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<title>Help Donate!</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="newstyle.css" />
-<header>
-<style type="text/css">
+
+<style>
 /* keyframes definition for WebKit browsers */
 
 @-webkit-keyframes travel {
@@ -32,7 +33,7 @@
 
 @keyframes travel {
   from { left: 0;     }
-  to   { left: 340px; }
+  to   { left: 300px; }
 }
 
 @keyframes bounce {
@@ -66,15 +67,15 @@
 #stage {
   position: relative;
   margin: 1em auto;
-  width: 400px;
-  height: 225px;0
+  width: 300px;
+  height: 165px;0
   border: 2px solid #666;
   background-image: url("soccerField.jpg");}
 
 #traveler {
   position: absolute;
-  width: 20px;
-  height: 240px;
+  width: 60px;
+  height: 180px;
 
   -webkit-animation-name: travel;
   -webkit-animation-timing-function: linear;
@@ -110,8 +111,6 @@
   animation-duration: 4.2s;
 }
 </style>
-
-
 <br />
 <div class="w3-container w3-center"> 
 	<img src="fireworks.JPG" class="responsive" alt="Fireworks" style="box-shadow: 10px 10px 12px #888888;"/>
@@ -178,35 +177,26 @@
 	<br />	
 </div>
 </div>
-
 <br/>
-
-<br />
-
-
-</header>
-<br />
-<br />
-
-<div id="stage">
-<div id="traveler">
-<div id="bouncer"><!-- --></div>
-</div>
-</div>
 <body>
-	<div style="text-align: center">
-		<p class="w3-xlarge w3-text-white w3-center">Charity Event<br>
+<div id="stage">
+ <div id="traveler">
+  <div id="bouncer"><!-- --></div>
+  </div>
+ </div>
+<div style="text-align: center">
+		<h3>Charity Event<h3>
 		<p>I'm collecting donations for my soccer team the Lightning, any help will be appreciated. All donations will directly support the team and Gallberry Farm's Elementary school.<br /> 
 		Thank you very much,
 		Respectfully,
 		Daniel Howard.</p>	
-	<b><h4>DONATE HERE!</h4></b>
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	   <h3>DONATE HERE!</h3>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 	<input type="hidden" name="cmd" value="_s-xclick" />
 	<input type="hidden" name="hosted_button_id" value="SH5UDFKJXA6MA" />
 	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
 	<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-	</form>
-	</div>
+</form>
+</div>
 </body>
 </html>
