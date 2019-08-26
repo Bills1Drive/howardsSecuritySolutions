@@ -75,10 +75,9 @@ div.desc {
 }
 
 .container {
-	border-radius: 5px;
-    background-color: #f2f2f2;
+	border-radius: 15px;
     padding: 20px;
-    position: left;
+    text-align: center;
   
 }
 
